@@ -1,13 +1,34 @@
 import React from "react";
 
 const Scores = (props) => {
+  let scores;
+  if (props.sortOrder === "ascending") {
+    scores = props.country.scores.sort((a, b) => {
+      if (a.s < b.s) {
+        return -1;
+      } else {
+        return 1;
+      }
+    });
+  } else {
+    scores = props.country.scores.sort((a, b) => {
+      if (a.s < b.s) {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
+  }
+
   return (
-    <table>
+    <table className="App">
       <tbody>
-        <tr>
-          <td>{props.n}</td>
-          <td>{props.s}</td>
-        </tr>
+        {scores.map((elem, index) => (
+          <tr key={index}>
+            <td>{elem.n}</td>
+            <td>{elem.s}</td>
+          </tr>
+        ))}
       </tbody>
     </table>
   );
