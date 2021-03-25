@@ -25,7 +25,7 @@ function App() {
       }
     });
   }
-  console.log(allScores);
+ 
 
   const [sort, setSort] = useState("descending");
   const clickHandler = () => {
@@ -41,7 +41,7 @@ function App() {
   return (
     <div className="App">
       <Header title={"HIGH SCORES"} />
-      <table>
+      <table className="table">
         {allScores.map((country, index) => (
           <AllScores n={country.n} s={country.s} key={index} />
         ))}
@@ -50,7 +50,7 @@ function App() {
       <button onClick={clickHandler}>Click to sort scores</button>
 
       {sortCountries.map((country, index) => (
-        <div key={index}>
+        <div className="results" key={index}>
           <Country name={country.name} />
           <Scores country={country} sortOrder={sort} />
         </div>

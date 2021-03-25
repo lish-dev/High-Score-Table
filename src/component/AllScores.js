@@ -1,6 +1,7 @@
 import React from "react";
 
 const AllScores = (props) => {
+    
   return (
     <tbody>
       <tr>
@@ -9,6 +10,7 @@ const AllScores = (props) => {
       </tr>
     </tbody>
   );
+  
 };
 
 export default AllScores;

@@ -1,5 +1,7 @@
 import React from "react";
 
+
+
 const Scores = (props) => {
   let scores;
   if (props.sortOrder === "ascending") {
@@ -21,7 +23,7 @@ const Scores = (props) => {
   }
 
   return (
-    <table className="App">
+    <table className="App.">
       <tbody>
         {scores.map((elem, index) => (
           <tr key={index}>
@@ -31,7 +33,10 @@ const Scores = (props) => {
         ))}
       </tbody>
     </table>
+    
   );
 };
+
+
 
 export default Scores;

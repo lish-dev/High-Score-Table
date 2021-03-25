@@ -1,7 +1,55 @@
-.App {
+.App  {
   text-align: center;
-
+  background-color: grey;
+ 
 }
+
+ .table, th, td, tr {
+    border: 1px solid black;
+    width: 60%;
+    margin: auto;
+  }
+
+  .App h4 {
+    display: flex;
+    font-size: large;
+    padding-top: 2rem;
+    
+  }
+
+ button{
+  display: block;
+
+ }
+
+  
+
+  
+
+
+
+
+
+
+
+/* .allCountryScores {
+  float: left;
+  height: 45rem;
+  padding: 20px;
+}
+
+.cardSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+.allCountryScores,
+.card-body {
+  display: flex;
+  justify-content: center;
+  width: 25rem;
+} */
 
 
   
